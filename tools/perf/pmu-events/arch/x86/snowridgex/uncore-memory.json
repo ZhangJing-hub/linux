@@ -120,6 +120,7 @@
     },
     {
         "BriefDescription": "Memory controller clock ticks",
+        "EventCode": "0x0",
         "EventName": "UNC_M_CLOCKTICKS",
         "PerPkg": "1",
         "PublicDescription": "Clockticks of the integrated memory controller (IMC)",

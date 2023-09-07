@@ -65,6 +65,7 @@
     },
     {
         "BriefDescription": "uclks",
+        "EventCode": "0x0",
         "EventName": "UNC_M_CLOCKTICKS",
         "PerPkg": "1",
         "PublicDescription": "Uncore Fixed Counter - uclks",

@@ -303,6 +303,7 @@
     },
     {
         "BriefDescription": "Reference cycles when the core is not in halt state.",
+        "EventCode": "0x0",
         "EventName": "CPU_CLK_UNHALTED.REF_TSC",
         "PublicDescription": "This event counts the number of reference cycles when the core is not in a halt state. The core enters the halt state when it is running the HLT instruction or the MWAIT instruction. This event is not affected by core frequency changes (for example, P states, TM2 transitions) but has the same incrementing frequency as the time stamp counter. This event can approximate elapsed time while the core was not in a halt state.",
         "SampleAfterValue": "2000003",
@@ -327,6 +328,7 @@
     },
     {
         "BriefDescription": "Core cycles when the thread is not in halt state.",
+        "EventCode": "0x0",
         "EventName": "CPU_CLK_UNHALTED.THREAD",
         "PublicDescription": "This event counts the number of thread cycles while the thread is not in a halt state. The thread enters the halt state when it is running the HLT instruction. The core frequency may change from time to time due to power or thermal throttling.",
         "SampleAfterValue": "2000003",
@@ -335,6 +337,7 @@
     {
         "AnyThread": "1",
         "BriefDescription": "Core cycles when at least one thread on the physical core is not in halt state.",
+        "EventCode": "0x0",
         "EventName": "CPU_CLK_UNHALTED.THREAD_ANY",
         "SampleAfterValue": "2000003",
         "UMask": "0x2"
@@ -436,6 +439,7 @@
     },
     {
         "BriefDescription": "Instructions retired from execution.",
+        "EventCode": "0x0",
         "Errata": "HSD140, HSD143",
         "EventName": "INST_RETIRED.ANY",
         "PublicDescription": "This event counts the number of instructions retired from execution. For instructions that consist of multiple micro-ops, this event counts the retirement of the last micro-op of the instruction. Counting continues during hardware interrupts, traps, and inside interrupt handlers. INST_RETIRED.ANY is counted by a designated fixed counter, leaving the programmable counters available for other events. Faulting executions of GETSEC/VM entry/VM Exit/MWait will not count as retired instructions.",

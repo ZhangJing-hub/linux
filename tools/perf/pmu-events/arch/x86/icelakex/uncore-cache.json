@@ -892,6 +892,7 @@
     },
     {
         "BriefDescription": "Clockticks of the uncore caching and home agent (CHA)",
+        "EventCode": "0x0",
         "EventName": "UNC_CHA_CLOCKTICKS",
         "PerPkg": "1",
         "Unit": "CHA"

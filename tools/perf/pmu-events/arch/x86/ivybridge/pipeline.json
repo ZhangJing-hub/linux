@@ -326,6 +326,7 @@
     },
     {
         "BriefDescription": "Reference cycles when the core is not in halt state.",
+        "EventCode": "0x0",
         "EventName": "CPU_CLK_UNHALTED.REF_TSC",
         "SampleAfterValue": "2000003",
         "UMask": "0x3"
@@ -348,6 +349,7 @@
     },
     {
         "BriefDescription": "Core cycles when the thread is not in halt state.",
+        "EventCode": "0x0",
         "EventName": "CPU_CLK_UNHALTED.THREAD",
         "SampleAfterValue": "2000003",
         "UMask": "0x2"
@@ -355,6 +357,7 @@
     {
         "AnyThread": "1",
         "BriefDescription": "Core cycles when at least one thread on the physical core is not in halt state",
+        "EventCode": "0x0",
         "EventName": "CPU_CLK_UNHALTED.THREAD_ANY",
         "PublicDescription": "Core cycles when at least one thread on the physical core is not in halt state.",
         "SampleAfterValue": "2000003",

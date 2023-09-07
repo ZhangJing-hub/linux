@@ -151,12 +151,14 @@
     },
     {
         "BriefDescription": "DRAM Clockticks",
+        "EventCode": "0x0",
         "EventName": "UNC_M_CLOCKTICKS",
         "PerPkg": "1",
         "Unit": "iMC"
     },
     {
         "BriefDescription": "DRAM Clockticks",
+        "EventCode": "0x0",
         "EventName": "UNC_M_DCLOCKTICKS",
         "PerPkg": "1",
         "Unit": "iMC"

@@ -29,6 +29,7 @@
     },
     {
         "BriefDescription": "Fixed Counter: Counts the number of unhalted reference clock cycles",
+        "EventCode": "0x0",
         "EventName": "CPU_CLK_UNHALTED.REF_TSC",
         "SampleAfterValue": "2000003",
         "UMask": "0x3"
@@ -43,6 +44,7 @@
     },
     {
         "BriefDescription": "Fixed Counter: Counts the number of unhalted core clock cycles",
+        "EventCode": "0x0",
         "EventName": "CPU_CLK_UNHALTED.THREAD",
         "SampleAfterValue": "2000003",
         "UMask": "0x2"
@@ -55,6 +57,7 @@
     },
     {
         "BriefDescription": "Fixed Counter: Counts the number of instructions retired",
+        "EventCode": "0x0",
         "EventName": "INST_RETIRED.ANY",
         "PEBS": "1",
         "SampleAfterValue": "2000003",

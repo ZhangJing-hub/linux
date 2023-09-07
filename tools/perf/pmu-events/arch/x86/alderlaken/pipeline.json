@@ -211,6 +211,7 @@
     },
     {
         "BriefDescription": "Counts the number of unhalted core clock cycles. (Fixed event)",
+        "EventCode": "0x0",
         "EventName": "CPU_CLK_UNHALTED.CORE",
         "PublicDescription": "Counts the number of core cycles while the core is not in a halt state. The core enters the halt state when it is running the HLT instruction. The core frequency may change from time to time. For this reason this event may have a changing ratio with regards to time. This event uses fixed counter 1.",
         "SampleAfterValue": "2000003",
@@ -225,6 +226,7 @@
     },
     {
         "BriefDescription": "Counts the number of unhalted reference clock cycles at TSC frequency. (Fixed event)",
+        "EventCode": "0x0",
         "EventName": "CPU_CLK_UNHALTED.REF_TSC",
         "PublicDescription": "Counts the number of reference cycles that the core is not in a halt state. The core enters the halt state when it is running the HLT instruction. This event is not affected by core frequency changes and increments at a fixed frequency that is also used for the Time Stamp Counter (TSC). This event uses fixed counter 2.",
         "SampleAfterValue": "2000003",
@@ -240,6 +242,7 @@
     },
     {
         "BriefDescription": "Counts the number of unhalted core clock cycles. (Fixed event)",
+        "EventCode": "0x0",
         "EventName": "CPU_CLK_UNHALTED.THREAD",
         "PublicDescription": "Counts the number of core cycles while the core is not in a halt state.  The core enters the halt state when it is running the HLT instruction. The core frequency may change from time to time. For this reason this event may have a changing ratio with regards to time.  This event uses fixed counter 1.",
         "SampleAfterValue": "2000003",

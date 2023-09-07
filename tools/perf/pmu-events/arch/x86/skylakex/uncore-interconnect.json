@@ -1090,6 +1090,7 @@
     },
     {
         "BriefDescription": "Cycles - at UCLK",
+        "EventCode": "0x0",
         "EventName": "UNC_M2M_CLOCKTICKS",
         "PerPkg": "1",
         "Unit": "M2M"

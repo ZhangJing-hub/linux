@@ -167,6 +167,7 @@
     },
     {
         "BriefDescription": "Memory controller clock ticks",
+        "EventCode": "0x0",
         "EventName": "UNC_M_CLOCKTICKS",
         "PerPkg": "1",
         "PublicDescription": "Counts clockticks of the fixed frequency clock of the memory controller using one of the programmable counters.",

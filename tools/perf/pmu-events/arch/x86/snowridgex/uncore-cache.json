@@ -872,6 +872,7 @@
     },
     {
         "BriefDescription": "Uncore cache clock ticks",
+        "EventCode": "0x0",
         "EventName": "UNC_CHA_CLOCKTICKS",
         "PerPkg": "1",
         "Unit": "CHA"

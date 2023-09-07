@@ -143,6 +143,7 @@
     },
     {
         "BriefDescription": "Fixed Counter: Counts the number of unhalted core clock cycles",
+        "EventCode": "0x0",
         "EventName": "CPU_CLK_UNHALTED.CORE",
         "PublicDescription": "Counts the number of core cycles while the core is not in a halt state. The core enters the halt state when it is running the HLT instruction. This event is a component in many key event ratios.  The core frequency may change from time to time. For this reason this event may have a changing ratio with regards to time. In systems with a constant core frequency, this event can give you a measurement of the elapsed time while the core was not in halt state by dividing the event count by the core frequency. This event is architecturally defined and is a designated fixed counter.  CPU_CLK_UNHALTED.CORE and CPU_CLK_UNHALTED.CORE_P use the core frequency which may change from time to time.  CPU_CLK_UNHALTE.REF_TSC and CPU_CLK_UNHALTED.REF are not affected by core frequency changes but counts as if the core is running at the maximum frequency all the time.  The fixed events are CPU_CLK_UNHALTED.CORE and CPU_CLK_UNHALTED.REF_TSC and the programmable events are CPU_CLK_UNHALTED.CORE_P and CPU_CLK_UNHALTED.REF.",
         "SampleAfterValue": "2000003",
@@ -165,6 +166,7 @@
     },
     {
         "BriefDescription": "Fixed Counter: Counts the number of unhalted reference clock cycles",
+        "EventCode": "0x0",
         "EventName": "CPU_CLK_UNHALTED.REF_TSC",
         "PublicDescription": "Counts the number of reference cycles while the core is not in a halt state. The core enters the halt state when it is running the HLT instruction. This event is a component in many key event ratios.  The core frequency may change from time. This event is not affected by core frequency changes but counts as if the core is running at the maximum frequency all the time.  Divide this event count by core frequency to determine the elapsed time while the core was not in halt state.  Divide this event count by core frequency to determine the elapsed time while the core was not in halt state.  This event is architecturally defined and is a designated fixed counter.  CPU_CLK_UNHALTED.CORE and CPU_CLK_UNHALTED.CORE_P use the core frequency which may change from time to time.  CPU_CLK_UNHALTE.REF_TSC and CPU_CLK_UNHALTED.REF are not affected by core frequency changes but counts as if the core is running at the maximum frequency all the time.  The fixed events are CPU_CLK_UNHALTED.CORE and CPU_CLK_UNHALTED.REF_TSC and the programmable events are CPU_CLK_UNHALTED.CORE_P and CPU_CLK_UNHALTED.REF.",
         "SampleAfterValue": "2000003",
@@ -180,6 +182,7 @@
     },
     {
         "BriefDescription": "Fixed Counter: Counts the number of instructions retired",
+        "EventCode": "0x0",
         "EventName": "INST_RETIRED.ANY",
         "PublicDescription": "This event counts the number of instructions that retire.  For instructions that consist of multiple micro-ops, this event counts exactly once, as the last micro-op of the instruction retires.  The event continues counting while instructions retire, including during interrupt service routines caused by hardware interrupts, faults or traps.  Background: Modern microprocessors employ extensive pipelining and speculative techniques.  Since sometimes an instruction is started but never completed, the notion of \"retirement\" is introduced.  A retired instruction is one that commits its states. Or stated differently, an instruction might be abandoned at some point. No instruction is truly finished until it retires.  This counter measures the number of completed instructions.  The fixed event is INST_RETIRED.ANY and the programmable event is INST_RETIRED.ANY_P.",
         "SampleAfterValue": "2000003",

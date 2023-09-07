@@ -109,6 +109,7 @@
     },
     {
         "BriefDescription": "Clocks in the IRP",
+        "EventCode": "0x0",
         "EventName": "UNC_I_CLOCKTICKS",
         "PerPkg": "1",
         "PublicDescription": "Number of clocks in the IRP.",
@@ -847,6 +848,7 @@
     },
     {
         "BriefDescription": "Flits Transferred - Group 0; Data Tx Flits",
+        "EventCode": "0x0",
         "EventName": "UNC_Q_TxL_FLITS_G0.DATA",
         "PerPkg": "1",
         "PublicDescription": "Counts the number of flits transmitted across the QPI Link.  It includes filters for Idle, protocol, and Data Flits.  Each 'flit' is made up of 80 bits of information (in addition to some ECC data).  In full-width (L0) mode, flits are made up of four 'fits', each of which contains 20 bits of data (along with some additional ECC data).   In half-width (L0p) mode, the fits are only 10 bits, and therefore it takes twice as many fits to transmit a flit.  When one talks about QPI 'speed' (for example, 8.0 GT/s), the 'transfers' here refer to 'fits'.  Therefore, in L0, the system will transfer 1 'flit' at the rate of 1/4th the QPI speed.  One can calculate the bandwidth of the link by taking: flits*80b/time.  Note that this is not the same as 'data' bandwidth.  For example, when we are transferring a 64B cacheline across QPI, we will break it into 9 flits -- 1 with header information and 8 with 64 bits of actual 'data' and an additional 16 bits of other information.  To calculate 'data' bandwidth, one should therefore do: data flits * 8B / time (for L0) or 4B instead of 8B for L0p.",
@@ -855,6 +857,7 @@
     },
     {
         "BriefDescription": "Flits Transferred - Group 0; Idle and Null Flits",
+        "EventCode": "0x0",
         "EventName": "UNC_Q_TxL_FLITS_G0.IDLE",
         "PerPkg": "1",
         "PublicDescription": "Counts the number of flits transmitted across the QPI Link.  It includes filters for Idle, protocol, and Data Flits.  Each 'flit' is made up of 80 bits of information (in addition to some ECC data).  In full-width (L0) mode, flits are made up of four 'fits', each of which contains 20 bits of data (along with some additional ECC data).   In half-width (L0p) mode, the fits are only 10 bits, and therefore it takes twice as many fits to transmit a flit.  When one talks about QPI 'speed' (for example, 8.0 GT/s), the 'transfers' here refer to 'fits'.  Therefore, in L0, the system will transfer 1 'flit' at the rate of 1/4th the QPI speed.  One can calculate the bandwidth of the link by taking: flits*80b/time.  Note that this is not the same as 'data' bandwidth.  For example, when we are transferring a 64B cacheline across QPI, we will break it into 9 flits -- 1 with header information and 8 with 64 bits of actual 'data' and an additional 16 bits of other information.  To calculate 'data' bandwidth, one should therefore do: data flits * 8B / time (for L0) or 4B instead of 8B for L0p.",
@@ -863,6 +866,7 @@
     },
     {
         "BriefDescription": "Flits Transferred - Group 0; Non-Data protocol Tx Flits",
+        "EventCode": "0x0",
         "EventName": "UNC_Q_TxL_FLITS_G0.NON_DATA",
         "PerPkg": "1",
         "PublicDescription": "Counts the number of flits transmitted across the QPI Link.  It includes filters for Idle, protocol, and Data Flits.  Each 'flit' is made up of 80 bits of information (in addition to some ECC data).  In full-width (L0) mode, flits are made up of four 'fits', each of which contains 20 bits of data (along with some additional ECC data).   In half-width (L0p) mode, the fits are only 10 bits, and therefore it takes twice as many fits to transmit a flit.  When one talks about QPI 'speed' (for example, 8.0 GT/s), the 'transfers' here refer to 'fits'.  Therefore, in L0, the system will transfer 1 'flit' at the rate of 1/4th the QPI speed.  One can calculate the bandwidth of the link by taking: flits*80b/time.  Note that this is not the same as 'data' bandwidth.  For example, when we are transferring a 64B cacheline across QPI, we will break it into 9 flits -- 1 with header information and 8 with 64 bits of actual 'data' and an additional 16 bits of other information.  To calculate 'data' bandwidth, one should therefore do: data flits * 8B / time (for L0) or 4B instead of 8B for L0p.",
@@ -871,6 +875,7 @@
     },
     {
         "BriefDescription": "Flits Transferred - Group 1; DRS Flits (both Header and Data)",
+        "EventCode": "0x0",
         "EventName": "UNC_Q_TxL_FLITS_G1.DRS",
         "PerPkg": "1",
         "PublicDescription": "Counts the number of flits transmitted across the QPI Link.  This is one of three 'groups' that allow us to track flits.  It includes filters for SNP, HOM, and DRS message classes.  Each 'flit' is made up of 80 bits of information (in addition to some ECC data).  In full-width (L0) mode, flits are made up of four 'fits', each of which contains 20 bits of data (along with some additional ECC data).   In half-width (L0p) mode, the fits are only 10 bits, and therefore it takes twice as many fits to transmit a flit.  When one talks about QPI 'speed' (for example, 8.0 GT/s), the 'transfers' here refer to 'fits'.  Therefore, in L0, the system will transfer 1 'flit' at the rate of 1/4th the QPI speed.  One can calculate the bandwidth of the link by taking: flits*80b/time.  Note that this is not the same as 'data' bandwidth.  For example, when we are transferring a 64B cacheline across QPI, we will break it into 9 flits -- 1 with header information and 8 with 64 bits of actual 'data' and an additional 16 bits of other information.  To calculate 'data' bandwidth, one should therefore do: data flits * 8B / time.",
@@ -879,6 +884,7 @@
     },
     {
         "BriefDescription": "Flits Transferred - Group 1; DRS Data Flits",
+        "EventCode": "0x0",
         "EventName": "UNC_Q_TxL_FLITS_G1.DRS_DATA",
         "PerPkg": "1",
         "PublicDescription": "Counts the number of flits transmitted across the QPI Link.  This is one of three 'groups' that allow us to track flits.  It includes filters for SNP, HOM, and DRS message classes.  Each 'flit' is made up of 80 bits of information (in addition to some ECC data).  In full-width (L0) mode, flits are made up of four 'fits', each of which contains 20 bits of data (along with some additional ECC data).   In half-width (L0p) mode, the fits are only 10 bits, and therefore it takes twice as many fits to transmit a flit.  When one talks about QPI 'speed' (for example, 8.0 GT/s), the 'transfers' here refer to 'fits'.  Therefore, in L0, the system will transfer 1 'flit' at the rate of 1/4th the QPI speed.  One can calculate the bandwidth of the link by taking: flits*80b/time.  Note that this is not the same as 'data' bandwidth.  For example, when we are transferring a 64B cacheline across QPI, we will break it into 9 flits -- 1 with header information and 8 with 64 bits of actual 'data' and an additional 16 bits of other information.  To calculate 'data' bandwidth, one should therefore do: data flits * 8B / time.",
@@ -887,6 +893,7 @@
     },
     {
         "BriefDescription": "Flits Transferred - Group 1; DRS Header Flits",
+        "EventCode": "0x0",
         "EventName": "UNC_Q_TxL_FLITS_G1.DRS_NONDATA",
         "PerPkg": "1",
         "PublicDescription": "Counts the number of flits transmitted across the QPI Link.  This is one of three 'groups' that allow us to track flits.  It includes filters for SNP, HOM, and DRS message classes.  Each 'flit' is made up of 80 bits of information (in addition to some ECC data).  In full-width (L0) mode, flits are made up of four 'fits', each of which contains 20 bits of data (along with some additional ECC data).   In half-width (L0p) mode, the fits are only 10 bits, and therefore it takes twice as many fits to transmit a flit.  When one talks about QPI 'speed' (for example, 8.0 GT/s), the 'transfers' here refer to 'fits'.  Therefore, in L0, the system will transfer 1 'flit' at the rate of 1/4th the QPI speed.  One can calculate the bandwidth of the link by taking: flits*80b/time.  Note that this is not the same as 'data' bandwidth.  For example, when we are transferring a 64B cacheline across QPI, we will break it into 9 flits -- 1 with header information and 8 with 64 bits of actual 'data' and an additional 16 bits of other information.  To calculate 'data' bandwidth, one should therefore do: data flits * 8B / time.",
@@ -895,6 +902,7 @@
     },
     {
         "BriefDescription": "Flits Transferred - Group 1; HOM Flits",
+        "EventCode": "0x0",
         "EventName": "UNC_Q_TxL_FLITS_G1.HOM",
         "PerPkg": "1",
         "PublicDescription": "Counts the number of flits transmitted across the QPI Link.  This is one of three 'groups' that allow us to track flits.  It includes filters for SNP, HOM, and DRS message classes.  Each 'flit' is made up of 80 bits of information (in addition to some ECC data).  In full-width (L0) mode, flits are made up of four 'fits', each of which contains 20 bits of data (along with some additional ECC data).   In half-width (L0p) mode, the fits are only 10 bits, and therefore it takes twice as many fits to transmit a flit.  When one talks about QPI 'speed' (for example, 8.0 GT/s), the 'transfers' here refer to 'fits'.  Therefore, in L0, the system will transfer 1 'flit' at the rate of 1/4th the QPI speed.  One can calculate the bandwidth of the link by taking: flits*80b/time.  Note that this is not the same as 'data' bandwidth.  For example, when we are transferring a 64B cacheline across QPI, we will break it into 9 flits -- 1 with header information and 8 with 64 bits of actual 'data' and an additional 16 bits of other information.  To calculate 'data' bandwidth, one should therefore do: data flits * 8B / time.",
@@ -903,6 +911,7 @@
     },
     {
         "BriefDescription": "Flits Transferred - Group 1; HOM Non-Request Flits",
+        "EventCode": "0x0",
         "EventName": "UNC_Q_TxL_FLITS_G1.HOM_NONREQ",
         "PerPkg": "1",
         "PublicDescription": "Counts the number of flits transmitted across the QPI Link.  This is one of three 'groups' that allow us to track flits.  It includes filters for SNP, HOM, and DRS message classes.  Each 'flit' is made up of 80 bits of information (in addition to some ECC data).  In full-width (L0) mode, flits are made up of four 'fits', each of which contains 20 bits of data (along with some additional ECC data).   In half-width (L0p) mode, the fits are only 10 bits, and therefore it takes twice as many fits to transmit a flit.  When one talks about QPI 'speed' (for example, 8.0 GT/s), the 'transfers' here refer to 'fits'.  Therefore, in L0, the system will transfer 1 'flit' at the rate of 1/4th the QPI speed.  One can calculate the bandwidth of the link by taking: flits*80b/time.  Note that this is not the same as 'data' bandwidth.  For example, when we are transferring a 64B cacheline across QPI, we will break it into 9 flits -- 1 with header information and 8 with 64 bits of actual 'data' and an additional 16 bits of other information.  To calculate 'data' bandwidth, one should therefore do: data flits * 8B / time.",
@@ -911,6 +920,7 @@
     },
     {
         "BriefDescription": "Flits Transferred - Group 1; HOM Request Flits",
+        "EventCode": "0x0",
         "EventName": "UNC_Q_TxL_FLITS_G1.HOM_REQ",
         "PerPkg": "1",
         "PublicDescription": "Counts the number of flits transmitted across the QPI Link.  This is one of three 'groups' that allow us to track flits.  It includes filters for SNP, HOM, and DRS message classes.  Each 'flit' is made up of 80 bits of information (in addition to some ECC data).  In full-width (L0) mode, flits are made up of four 'fits', each of which contains 20 bits of data (along with some additional ECC data).   In half-width (L0p) mode, the fits are only 10 bits, and therefore it takes twice as many fits to transmit a flit.  When one talks about QPI 'speed' (for example, 8.0 GT/s), the 'transfers' here refer to 'fits'.  Therefore, in L0, the system will transfer 1 'flit' at the rate of 1/4th the QPI speed.  One can calculate the bandwidth of the link by taking: flits*80b/time.  Note that this is not the same as 'data' bandwidth.  For example, when we are transferring a 64B cacheline across QPI, we will break it into 9 flits -- 1 with header information and 8 with 64 bits of actual 'data' and an additional 16 bits of other information.  To calculate 'data' bandwidth, one should therefore do: data flits * 8B / time.",
@@ -919,6 +929,7 @@
     },
     {
         "BriefDescription": "Flits Transferred - Group 1; SNP Flits",
+        "EventCode": "0x0",
         "EventName": "UNC_Q_TxL_FLITS_G1.SNP",
         "PerPkg": "1",
         "PublicDescription": "Counts the number of flits transmitted across the QPI Link.  This is one of three 'groups' that allow us to track flits.  It includes filters for SNP, HOM, and DRS message classes.  Each 'flit' is made up of 80 bits of information (in addition to some ECC data).  In full-width (L0) mode, flits are made up of four 'fits', each of which contains 20 bits of data (along with some additional ECC data).   In half-width (L0p) mode, the fits are only 10 bits, and therefore it takes twice as many fits to transmit a flit.  When one talks about QPI 'speed' (for example, 8.0 GT/s), the 'transfers' here refer to 'fits'.  Therefore, in L0, the system will transfer 1 'flit' at the rate of 1/4th the QPI speed.  One can calculate the bandwidth of the link by taking: flits*80b/time.  Note that this is not the same as 'data' bandwidth.  For example, when we are transferring a 64B cacheline across QPI, we will break it into 9 flits -- 1 with header information and 8 with 64 bits of actual 'data' and an additional 16 bits of other information.  To calculate 'data' bandwidth, one should therefore do: data flits * 8B / time.",
@@ -1576,6 +1587,7 @@
     },
     {
         "EventName": "UNC_U_CLOCKTICKS",
+        "EventCode": "0x0",
         "PerPkg": "1",
         "Unit": "UBOX"
     },

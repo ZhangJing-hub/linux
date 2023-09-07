@@ -150,12 +150,14 @@
     },
     {
         "BriefDescription": "Fixed Counter: Counts the number of unhalted reference clock cycles",
+        "EventCode": "0x0",
         "EventName": "CPU_CLK_UNHALTED.REF_TSC",
         "SampleAfterValue": "2000003",
         "UMask": "0x3"
     },
     {
         "BriefDescription": "Fixed Counter: Counts the number of unhalted core clock cycles",
+        "EventCode": "0x0",
         "EventName": "CPU_CLK_UNHALTED.THREAD",
         "PublicDescription": "This event counts the number of core cycles while the thread is not in a halt state. The thread enters the halt state when it is running the HLT instruction. This event is a component in many key event ratios. The core frequency may change from time to time due to transitions associated with Enhanced Intel SpeedStep Technology or TM2. For this reason this event may have a changing ratio with regards to time. When the core frequency is constant, this event can approximate elapsed time while the core was not in the halt state. It is counted on a dedicated fixed counter",
         "SampleAfterValue": "2000003",
@@ -177,6 +179,7 @@
     },
     {
         "BriefDescription": "Fixed Counter: Counts the number of instructions retired",
+        "EventCode": "0x0",
         "EventName": "INST_RETIRED.ANY",
         "PublicDescription": "This event counts the number of instructions that retire.  For instructions that consist of multiple micro-ops, this event counts exactly once, as the last micro-op of the instruction retires.  The event continues counting while instructions retire, including during interrupt service routines caused by hardware interrupts, faults or traps.",
         "SampleAfterValue": "2000003",

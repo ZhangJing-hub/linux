@@ -19,6 +19,7 @@
     },
     {
         "BriefDescription": "Clocks in the IRP",
+        "EventCode": "0x0",
         "EventName": "UNC_I_CLOCKTICKS",
         "PerPkg": "1",
         "PublicDescription": "Number of clocks in the IRP.",

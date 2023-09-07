@@ -1419,6 +1419,7 @@
     },
     {
         "BriefDescription": "Clockticks of the mesh to memory (M2M)",
+        "EventCode": "0x0",
         "EventName": "UNC_M2M_CLOCKTICKS",
         "PerPkg": "1",
         "Unit": "M2M"

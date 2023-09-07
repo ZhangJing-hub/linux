@@ -1271,6 +1271,7 @@
     },
     {
         "BriefDescription": "Counting disabled",
+        "EventCode": "0x0",
         "EventName": "UNC_IIO_NOTHING",
         "PerPkg": "1",
         "Unit": "IIO"

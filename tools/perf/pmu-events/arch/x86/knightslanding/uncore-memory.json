@@ -41,6 +41,7 @@
     },
     {
         "BriefDescription": "ECLK count",
+        "EventCode": "0x0",
         "EventName": "UNC_E_E_CLOCKTICKS",
         "PerPkg": "1",
         "Unit": "EDC_ECLK"
@@ -55,6 +56,7 @@
     },
     {
         "BriefDescription": "UCLK count",
+        "EventCode": "0x0",
         "EventName": "UNC_E_U_CLOCKTICKS",
         "PerPkg": "1",
         "Unit": "EDC_UCLK"
@@ -93,12 +95,14 @@
     },
     {
         "BriefDescription": "DCLK count",
+        "EventCode": "0x0",
         "EventName": "UNC_M_D_CLOCKTICKS",
         "PerPkg": "1",
         "Unit": "iMC_DCLK"
     },
     {
         "BriefDescription": "UCLK count",
+        "EventCode": "0x0",
         "EventName": "UNC_M_U_CLOCKTICKS",
         "PerPkg": "1",
         "Unit": "iMC_UCLK"

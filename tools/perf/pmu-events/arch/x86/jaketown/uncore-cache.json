@@ -1,6 +1,7 @@
 [
     {
         "BriefDescription": "Uncore Clocks",
+        "EventCode": "0x0",
         "EventName": "UNC_C_CLOCKTICKS",
         "PerPkg": "1",
         "Unit": "CBOX"
@@ -863,6 +864,7 @@
     },
     {
         "BriefDescription": "uclks",
+        "EventCode": "0x0",
         "EventName": "UNC_H_CLOCKTICKS",
         "PerPkg": "1",
         "PublicDescription": "Counts the number of uclks in the HA.  This will be slightly different than the count in the Ubox because of enable/freeze delays.  The HA is on the other side of the die from the fixed Ubox uclk counter, so the drift could be somewhat larger than in units that are closer like the QPI Agent.",

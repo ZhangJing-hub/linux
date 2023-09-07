@@ -512,6 +512,7 @@
     },
     {
         "BriefDescription": "Uncore cache clock ticks",
+        "EventCode": "0x0",
         "EventName": "UNC_CHA_CLOCKTICKS",
         "PerPkg": "1",
         "PublicDescription": "Counts clockticks of the clock controlling the uncore caching and home agent (CHA).",
@@ -5792,6 +5793,7 @@
     },
     {
         "BriefDescription": "This event is deprecated. Refer to new event UNC_CHA_CLOCKTICKS",
+        "EventCode": "0x0",
         "Deprecated": "1",
         "EventName": "UNC_C_CLOCKTICKS",
         "PerPkg": "1",

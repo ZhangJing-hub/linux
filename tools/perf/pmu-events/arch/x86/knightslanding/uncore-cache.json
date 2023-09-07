@@ -3246,6 +3246,7 @@
     },
     {
         "BriefDescription": "Uncore Clocks",
+        "EventCode": "0x0",
         "EventName": "UNC_H_U_CLOCKTICKS",
         "PerPkg": "1",
         "Unit": "CHA"

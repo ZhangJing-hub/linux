@@ -1,6 +1,7 @@
 [
     {
         "BriefDescription": "pclk Cycles",
+        "EventCode": "0x0",
         "EventName": "UNC_P_CLOCKTICKS",
         "PerPkg": "1",
         "PublicDescription": "The PCU runs off a fixed 800 MHz clock.  This event counts the number of pclk cycles measured while the counter was enabled.  The pclk, like the Memory Controller's dclk, counts at a constant rate making it a good measure of actual wall time.",
@@ -216,6 +217,7 @@
     },
     {
         "BriefDescription": "Cycles spent changing Frequency",
+        "EventCode": "0x0",
         "EventName": "UNC_P_FREQ_TRANS_CYCLES",
         "PerPkg": "1",
         "PublicDescription": "Counts the number of cycles when the system is changing frequency.  This can not be filtered by thread ID.  One can also use it with the occupancy counter that monitors number of threads in C0 to estimate the performance impact that frequency transitions had on the system.",

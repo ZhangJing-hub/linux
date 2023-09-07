@@ -1,6 +1,7 @@
 [
     {
         "BriefDescription": "Clockticks of the power control unit (PCU)",
+        "EventCode": "0x0",
         "EventName": "UNC_P_CLOCKTICKS",
         "PerPkg": "1",
         "Unit": "PCU"
