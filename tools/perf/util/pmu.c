@@ -875,6 +875,30 @@ out:
 	return res;
 }
 
+bool pmu_uncore_identifier_match(const char *id, const char *compat)
+{
+	char *tmp = NULL, *tok, *str;
+	bool res = false;
+
+	/*
+	 * The strdup() call is necessary here because "compat" is a const str*
+	 * type and cannot be used as an argument to strtok_r().
+	 */
+	str = strdup(compat);
+	if (!str)
+		return false;
+
+	tok = strtok_r(str, ";", &tmp);
+	for (; tok; tok = strtok_r(NULL, ";", &tmp)) {
+		if (!fnmatch(tok, id, FNM_CASEFOLD)) {
+			res = true;
+			break;
+		}
+	}
+	free(str);
+	return res;
+}
+
 static int pmu_add_cpu_aliases_map_callback(const struct pmu_event *pe,
 					const struct pmu_events_table *table __maybe_unused,
 					void *vdata)
@@ -915,8 +939,8 @@ static int pmu_add_sys_aliases_iter_fn(const struct pmu_event *pe,
 	if (!pe->compat || !pe->pmu)
 		return 0;
 
-	if (!strcmp(pmu->id, pe->compat) &&
-	    pmu_uncore_alias_match(pe->pmu, pmu->name)) {
+	if (pmu_uncore_alias_match(pe->pmu, pmu->name) &&
+			pmu_uncore_identifier_match(pmu->id, pe->compat)) {
 		perf_pmu__new_alias(pmu,
 				pe->name,
 				pe->desc,
