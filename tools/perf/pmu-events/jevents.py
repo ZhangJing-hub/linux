@@ -292,11 +292,14 @@ class JsonEvent:
       }
       return table[unit] if unit in table else f'uncore_{unit.lower()}'
 
-    eventcode = 0
+    eventcode = None
     if 'EventCode' in jd:
       eventcode = int(jd['EventCode'].split(',', 1)[0], 0)
     if 'ExtSel' in jd:
-      eventcode |= int(jd['ExtSel']) << 8
+      if eventcode is None:
+        eventcode = int(jd['ExtSel']) << 8
+      else:
+        eventcode |= int(jd['ExtSel']) << 8
     configcode = int(jd['ConfigCode'], 0) if 'ConfigCode' in jd else None
     self.name = jd['EventName'].lower() if 'EventName' in jd else None
     self.topic = ''
@@ -335,7 +338,11 @@ class JsonEvent:
     if precise and self.desc and '(Precise Event)' not in self.desc:
       extra_desc += ' (Must be precise)' if precise == '2' else (' (Precise '
                                                                  'event)')
-    event = f'config={llx(configcode)}' if configcode is not None else f'event={llx(eventcode)}'
+    event = None
+    if eventcode is not None:
+      event = f'event={llx(eventcode)}'
+    elif configcode is not None:
+      event = f'config={llx(configcode)}'
     event_fields = [
         ('AnyThread', 'any='),
         ('PortMask', 'ch_mask='),
@@ -345,10 +352,15 @@ class JsonEvent:
         ('Invert', 'inv='),
         ('SampleAfterValue', 'period='),
         ('UMask', 'umask='),
+        ('NodeType', 'type='),
+        ('EventIdCode', 'eventid='),
     ]
     for key, value in event_fields:
       if key in jd and jd[key] != '0':
-        event += ',' + value + jd[key]
+        if event:
+          event += ',' + value + jd[key]
+        else:
+          event = value + jd[key]
     if filter:
       event += f',{filter}'
     if msr:
